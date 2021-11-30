@@ -19,6 +19,13 @@ def game(secret_word):
     else:
         print("You Lost!")
 
+    if guess not in word
+        attempt_word.append(guess)
+        attempts -= 1
+
+    if guess is not word
+        attempt_letter.append(guess)
+        attempts -= 1
 
 def main():
     secret_word = secret_random_word()
