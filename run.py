@@ -13,3 +13,11 @@ def game(secret_word):
         print("You Won!")
     else:
         print("You Lost!")
+
+
+def main():
+    secret_word = secret_random_word()
+    game(secret_word)
+
+
+main()
