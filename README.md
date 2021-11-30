@@ -68,3 +68,7 @@ User Stories:
 ### Interface design
 
 * Terminal
+
+### Wireframes - Flowchart
+
+Flowchart for the project can be found <a href="https://github.com/Cezary-Nakielski/Project-Three-The-Hangman/blob/main/assets/flowchart.png" target="_blank"> here. </a>
