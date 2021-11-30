@@ -8,6 +8,11 @@ def secret_random_word():
 
 
 def game(secret_word):
+    game_score = False
+    attempt_word = []
+    attempt_letter = []
+    attempts = 6
+    word_display = list(len(secret_random_word)*"_")
     guess = input("Guess the word:")
     if guess == secret_word:
         print("You Won!")
