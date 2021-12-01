@@ -16,24 +16,27 @@ def game(secret_word):
     while not game_score:
         guess = input("Guess the word or a letter contained in the word:")
         if guess in attempt_letter:
-            print("You already tried that letter.")
+            print(f"You already tried {guess} before.")
         elif guess not in secret_word:
             attempt_letter.append(guess)
             attempts -= 1
             print(f"{guess} is not contained in the word.")
-        else:
+        elif:
             attempt_letter.append(guess)
-            print(f"{guess} is contained in the word.")
             word_display_list = list(word_display)
             indices = [i for i, letter in enumerate(secret_word)
                        if letter == guess]
             for index in indices:
                 word_display_list[index] = guess
             word_display = "".join(word_display_list)
-        elif len(secret_word) = len(guess) and guess in attempt_word:
-            print("You already tried that word.")
-
-
+            print(f"{guess} is contained in the word.")
+        elif len(secret_word) = len(guess):
+            if guess in attempt_word:
+                print(f"You already tried {guess} before.")
+            else:
+                attempt_word.append(guess)
+                attempts -= 1
+                print(f"{guess} is not the word you're looking for.")
 
     # if guess == secret_word:
     #     print("You Won!")
