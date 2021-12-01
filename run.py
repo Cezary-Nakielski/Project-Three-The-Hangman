@@ -16,7 +16,7 @@ def game(secret_word):
     while not game_score:
         guess = input("Guess the word or a letter contained in the word:")
         if guess in attempt_letter:
-            print("You already tried that.")
+            print("You already tried that letter.")
         elif guess not in secret_word:
             attempt_letter.append(guess)
             attempts -= 1
@@ -30,6 +30,9 @@ def game(secret_word):
             for index in indices:
                 word_display_list[index] = guess
             word_display = "".join(word_display_list)
+        elif len(secret_word) = len(guess) and guess in attempt_word:
+            print("You already tried that word.")
+
 
 
     # if guess == secret_word:
