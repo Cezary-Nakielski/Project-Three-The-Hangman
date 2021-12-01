@@ -26,14 +26,12 @@ def game(secret_word):
             print(f"{guess} is contained in the word.")
             word_display_list = list(word_display)
             indices = [i for i, letter in enumerate(secret_word)
-                if letter == guess]
+                       if letter == guess]
             for index in indices:
                 word_display_list[index] = guess
-                word_display = "".join(word_display_list)
+            word_display = "".join(word_display_list)
 
-            
 
-            
     # if guess == secret_word:
     #     print("You Won!")
     # else:
