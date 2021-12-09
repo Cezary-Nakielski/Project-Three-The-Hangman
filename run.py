@@ -1,13 +1,31 @@
+"""
+The game of Hangman:
+Upon start, computer chooses a random word from a list of words.
+Then user is asked to guess a letter that is inside the hidden word
+or the whole word.
+The user wins if the word is guessed
+or loses if he/she runs out of allowed attempts before guessing the word.
+"""
 import random
 from random_words import random_list
 
 
 def secret_random_word():
+    """
+    Pick a random word from imported random_words list
+    which later is passed to the 'game' function.
+    """
     secret_word = random.choice(random_list)
     return secret_word
 
 
 def game(secret_word):
+    """
+    Handle the main functionality of the game.
+    Receive a secret_word from secret_random_word function,
+    then ask the user for input and compare the input with the hidden word,
+    then display information about the result and how to proceed accordingly.
+    """
     game_score = False
     attempt_word = []
     attempt_letter = []
@@ -17,7 +35,7 @@ def game(secret_word):
         guess = input("Guess the word or a letter contained in the word:\n")
         if len(guess) == 1:
             if guess in attempt_letter:
-                print(f"You already tried {guess} before.") 
+                print(f"You already tried {guess} before.")
             elif guess not in secret_word:
                 attempt_letter.append(guess)
                 attempts -= 1
@@ -39,7 +57,6 @@ def game(secret_word):
                 attempts -= 1
                 print(f"{guess} is not the word you're looking for.")
 
-
     # if guess == secret_word:
     #     print("You Won!")
     # else:
@@ -50,6 +67,9 @@ def game(secret_word):
 
 
 def main():
+    """
+    Initiate the game
+    """
     secret_word = secret_random_word()
     game(secret_word)
 
