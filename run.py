@@ -14,7 +14,7 @@ def game(secret_word):
     attempts = 6
     word_display = len(secret_word) * "_"
     while not game_score:
-        guess = input("Guess the word or a letter contained in the word:")
+        guess = input("Guess the word or a letter contained in the word:\n")
         if len(guess) == 1:
             if guess in attempt_letter:
                 print(f"You already tried {guess} before.") 
