@@ -31,7 +31,7 @@ def game(secret_word):
     attempt_letter = []
     attempts = 6
     word_display = len(secret_word) * "_"
-    while not game_score:
+    while not game_score and attempts > 0:
         guess = input("Guess the word or a letter contained in the word:\n")
         if len(guess) == 1:
             if guess in attempt_letter:
