@@ -19,7 +19,7 @@ def secret_random_word():
     return secret_word
 
 
-def game(secret_word, attempts):
+def game(secret_word, number_attempts):
     """
     Handle the main functionality of the game.
     Receive a secret_word from secret_random_word function,
@@ -30,6 +30,7 @@ def game(secret_word, attempts):
     attempt_word = []
     attempt_letter = []
     word_display = len(secret_word) * "_"
+    attempts = number_attempts
     print("Game begins!")
     print(word_display)
     print(f"attempts\n")
@@ -71,16 +72,16 @@ def game(secret_word, attempts):
         print("You Won!")
     else:
         print(f"You lost! It was '{secret_word}'.")
-    restart(attempts)
+    restartnumber_(attempts)
 
-def restart(attempts):
+def restart(number_attempts):
     """
     Display options to restart the game and react to users input accordingly
     """
     option_restart = input("Do you want to restart the game? y/n")
     if option_restart == "y":
         secret_word = secret_random_word()
-        game(secret_word, attempts)
+        game(secret_word, number_attempts)
     elif option_restart == "n":
         main()
     else:
@@ -94,12 +95,12 @@ def main():
     """
     level = main_menu()
     if level == "level_chosen":
-        attempts = 6
+        number_attempts = 6
     else:
-        attempts = menu_difficulty()
+        number_attempts = menu_difficulty()
 
     secret_word = secret_random_word()
-    game(secret_word, attempts)
+    game(secret_word, number_attempts)
 
 def main_menu():
     """
@@ -152,16 +153,16 @@ def menu_difficulty():
         difficulty = input(" \n")
         if difficulty == "1":
             choice = True
-            attempts = 9
+            number_attempts = 9
             return attempts
         elif difficulty == "2":
             choice = True
-            attempts = 6
+            number_attempts = 6
             return attempts
         elif difficulty == "3":
             choice = True
-            attempts = 3
-            return attempts
+            number_attempts = 3
+            return number_attempts
         else:
             print("Incorrect input. Choose one of the above options.")
 
