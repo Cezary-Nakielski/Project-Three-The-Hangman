@@ -116,6 +116,15 @@ def instructions():
     """
     Display instructions for the game to the user
     """
+    print(
+        """
+        Find the hidden word by either guessing a letter contained in the hidden word
+        or the whole word at once.
+        Each failed attempt will subtract one chance of guessing from the number of
+        chances given to you at the start of the game. If you run out of chances,
+        the game will be over and the hangman will hang you.
+        """
+    )
 
 
 def menu_difficulty():
