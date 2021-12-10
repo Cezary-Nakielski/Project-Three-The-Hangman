@@ -71,9 +71,17 @@ def game(secret_word):
 
 def restart()
     """
-    Display options to restart the game
+    Display options to restart the game and react to users input accordingly
     """
-
+    option_restart = input("Do you want to restart the game? y/n")
+    if option_restart == "y":
+        secret_word = secret_random_word()
+        game(secret_word)
+    elif option_restart == "n"::
+        main()
+    else:
+        print("Type either 'y' or 'n'")
+        restart()
 
 def main():
     """
