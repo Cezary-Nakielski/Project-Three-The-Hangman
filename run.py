@@ -135,5 +135,22 @@ def menu_difficulty():
     print("1 for Beginner")
     print("2 for Player")
     print("3 for Veteran")
+    choice = False
+    while not choice:
+        difficulty = input(" \n")
+        if difficulty == "1":
+            choice = True
+            attempts = 9
+            return attempts
+        elif difficulty == "2":
+            choice = True
+            attempts = 6
+            return attempts
+        elif difficulty == "3":
+            choice = True
+            attempts = 3
+            return attempts
+        else:
+            print("Incorrect input. Choose one of the above options.")
 
 main()
