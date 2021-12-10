@@ -85,7 +85,7 @@ def restart(attempts):
         main()
     else:
         print("Type either 'y' or 'n'")
-        restart()
+        restart(attempts)
 
 
 def main():
