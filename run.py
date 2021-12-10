@@ -131,6 +131,9 @@ def menu_difficulty():
     """
     Display options to choose difficulty to the user and react to user's input
     """
-
+    print("Choose game difficulty:")
+    print("1 for Beginner")
+    print("2 for Player")
+    print("3 for Veteran")
 
 main()
