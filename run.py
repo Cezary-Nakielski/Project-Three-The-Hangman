@@ -67,6 +67,12 @@ def game(secret_word):
         print("You Won!")
     else:
         print(f"You lost! It was {secret_word}.")
+    restart()
+
+def restart()
+    """
+    Display options to restart the game
+    """
 
 
 def main():
