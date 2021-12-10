@@ -71,16 +71,16 @@ def game(secret_word, attempts):
         print("You Won!")
     else:
         print(f"You lost! It was '{secret_word}'.")
-    restart()
+    restart(attempts)
 
-def restart():
+def restart(attempts):
     """
     Display options to restart the game and react to users input accordingly
     """
     option_restart = input("Do you want to restart the game? y/n")
     if option_restart == "y":
         secret_word = secret_random_word()
-        game(secret_word)
+        game(secret_word, attempts)
     elif option_restart == "n":
         main()
     else:
@@ -93,7 +93,7 @@ def main():
     Initiate the game
     """
     secret_word = secret_random_word()
-    game(secret_word)
+    game(secret_word, attempts)
 
 def main_menu():
     """
