@@ -49,7 +49,7 @@ def game(secret_word):
                     word_display_list[index] = guess
                 word_display = "".join(word_display_list)
                 print(f"{guess} is contained in the word.")
-                if guess in "_" not in word_display:
+                if "_" not in word_display:
                     game_score = True
         elif len(secret_word) == len(guess):
             if guess in attempt_word:
@@ -62,14 +62,6 @@ def game(secret_word):
                 word_display = secret_word
                 game_score = True
                 print("You Won!")
-
-    # if guess == secret_word:
-    #     print("You Won!")
-    # else:
-    #     print("You Lost!")
-    # if guess is not secret_word:
-    #     attempt_letter.append(guess)
-    #     attempts -= 1
 
 
 def main():
