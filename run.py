@@ -19,7 +19,7 @@ def secret_random_word():
     return secret_word
 
 
-def game(secret_word):
+def game(secret_word, attempts):
     """
     Handle the main functionality of the game.
     Receive a secret_word from secret_random_word function,
@@ -29,10 +29,10 @@ def game(secret_word):
     game_score = False
     attempt_word = []
     attempt_letter = []
-    attempts = 6
     word_display = len(secret_word) * "_"
     print("Game begins!")
     print(word_display)
+    print(f"attempts\n")
     while not game_score and attempts > 0:
         guess = input("Guess the word or a letter contained in the word:\n")
         if len(guess) == 1:
@@ -66,6 +66,7 @@ def game(secret_word):
         else:
             print("It must be a letter or a whole word")
         print(word_display)
+        print(f"attempts\n")
     if game_score:
         print("You Won!")
     else:
