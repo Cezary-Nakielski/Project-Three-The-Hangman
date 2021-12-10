@@ -16,7 +16,7 @@ def secret_random_word():
     which later is passed to the 'game' function.
     """
     secret_word = random.choice(random_list)
-    return secret_word
+    return secret_word.lower()
 
 
 def game(secret_word, number_attempts):
@@ -35,8 +35,8 @@ def game(secret_word, number_attempts):
     print(word_display)
     print(f"attempts\n")
     while not game_score and attempts > 0:
-        guess = input("Guess the word or a letter contained in the word:\n")
-        if len(guess) == 1:
+        guess = input("Guess the word or a letter contained in the word:\n").lower
+        if len(guess) == 1 and guess.isalpha():
             if guess in attempt_letter:
                 print(f"You already tried {guess} before.")
             elif guess not in secret_word:
@@ -54,7 +54,7 @@ def game(secret_word, number_attempts):
                 print(f"{guess} is contained in the word.")
                 if "_" not in word_display:
                     game_score = True
-        elif len(secret_word) == len(guess):
+        elif len(secret_word) == len(guess) and guess.isalpha():
             if guess in attempt_word:
                 print(f"You already tried the word {guess} before.")
             elif guess != secret_word:
