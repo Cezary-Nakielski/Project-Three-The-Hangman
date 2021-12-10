@@ -92,6 +92,12 @@ def main():
     """
     Initiate the game
     """
+    level = main_menu()
+    if level == "level_chosen":
+        attempts = 6
+    else:
+        attempts = menu_difficulty()
+
     secret_word = secret_random_word()
     game(secret_word, attempts)
 
@@ -107,14 +113,16 @@ def main_menu():
         option = input(" \n")
         if option == "1":
             select = True
-            secret_word = secret_random_word()
-            game(secret_word)
+            level = "level_chosen"
+            return level
         elif option == "2":
             select = True
             instructions()
-        else:
+        elif option == "3":
             select = True
-            menu_difficulty()
+        else:
+            print("Choose between 1, 2 and 3 to select difficulty")
+
 
 def instructions():
     """
