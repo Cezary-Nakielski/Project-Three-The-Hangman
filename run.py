@@ -62,6 +62,8 @@ def game(secret_word):
                 word_display = secret_word
                 game_score = True
                 print("You Won!")
+        else:
+            print("It must be a letter or a whole word")
 
 
 def main():
