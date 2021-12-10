@@ -98,6 +98,19 @@ def main_menu():
     print("1 to play")
     print("2 for instructions")
     print("3 to choose difficulty")
+    select = False
+    while not select:
+        option = input(" \n")
+        if option == "1":
+            select = True
+            secret_word = secret_random_word()
+            game(secret_word)
+        elif option == "2":
+            select = True
+            instructions()
+        else:
+            select = True
+            menu_difficulty()
 
 
 main()
