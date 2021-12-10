@@ -83,12 +83,21 @@ def restart()
         print("Type either 'y' or 'n'")
         restart()
 
+
 def main():
     """
     Initiate the game
     """
     secret_word = secret_random_word()
     game(secret_word)
+
+def main_menu():
+    """
+    Main menu of the game
+    """
+    print("1 to play")
+    print("2 for instructions")
+    print("3 to choose difficulty")
 
 
 main()
