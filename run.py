@@ -61,9 +61,12 @@ def game(secret_word):
             else:
                 word_display = secret_word
                 game_score = True
-                print("You Won!")
         else:
             print("It must be a letter or a whole word")
+    if game_score:
+        print("You Won!")
+    else:
+        print(f"You lost! It was {secret_word}.")
 
 
 def main():
