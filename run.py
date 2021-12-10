@@ -69,7 +69,7 @@ def game(secret_word):
         print(f"You lost! It was {secret_word}.")
     restart()
 
-def restart()
+def restart():
     """
     Display options to restart the game and react to users input accordingly
     """
