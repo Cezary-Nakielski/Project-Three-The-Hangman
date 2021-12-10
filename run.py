@@ -70,9 +70,11 @@ def game(secret_word, number_attempts):
         print(f"attempts\n")
     if game_score:
         print("You Won!")
+        win()
     else:
         print(f"You lost! It was '{secret_word}'.")
-    restartnumber_(attempts)
+        defeat()
+    restart (number_attempts)
 
 def restart(number_attempts):
     """
@@ -93,6 +95,7 @@ def main():
     """
     Initiate the game
     """
+    game_intro()
     level = main_menu()
     if level == "level_chosen":
         number_attempts = 6
@@ -166,4 +169,37 @@ def menu_difficulty():
         else:
             print("Incorrect input. Choose one of the above options.")
 
+
+def game_intro():
+    print(
+        """
+      _____  _           _  _                                      
+     |_   _|| |_   ___  | || | __ _  _ _   __ _  _ __   __ _  _ _  
+       | |  | ' \ / -_) | __ |/ _` || ' \ / _` || '  \ / _` || ' \ 
+       |_|  |_||_|\___| |_||_|\__,_||_||_|\__, ||_|_|_|\__,_||_||_|
+                                          |___/                    
+        """
+    )
+
+
+def win():
+    print(
+        """
+     __      __ _       
+     \ \    / /(_) _ _  
+      \ \/\/ / | || ' \ 
+       \_/\_/  |_||_||_|
+        """         
+    )
+
+
+def defeat():
+    print(
+        """
+      ___         __             _   
+     |   \  ___  / _| ___  __ _ | |_ 
+     | |) |/ -_)|  _|/ -_)/ _` ||  _|
+     |___/ \___||_|  \___|\__,_| \__|
+        """
+    )
 main()
