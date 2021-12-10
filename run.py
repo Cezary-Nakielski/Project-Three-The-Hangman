@@ -112,5 +112,16 @@ def main_menu():
             select = True
             menu_difficulty()
 
+def instructions():
+    """
+    Display instructions for the game to the user
+    """
+
+
+def menu_difficulty():
+    """
+    Display options to choose difficulty to the user and react to user's input
+    """
+
 
 main()
