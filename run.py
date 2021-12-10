@@ -77,7 +77,7 @@ def restart():
     if option_restart == "y":
         secret_word = secret_random_word()
         game(secret_word)
-    elif option_restart == "n"::
+    elif option_restart == "n":
         main()
     else:
         print("Type either 'y' or 'n'")
