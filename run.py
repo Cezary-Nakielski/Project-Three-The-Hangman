@@ -31,6 +31,8 @@ def game(secret_word):
     attempt_letter = []
     attempts = 6
     word_display = len(secret_word) * "_"
+    print("Game begins!")
+    print(word_display)
     while not game_score and attempts > 0:
         guess = input("Guess the word or a letter contained in the word:\n")
         if len(guess) == 1:
@@ -63,10 +65,11 @@ def game(secret_word):
                 game_score = True
         else:
             print("It must be a letter or a whole word")
+        print(word_display)
     if game_score:
         print("You Won!")
     else:
-        print(f"You lost! It was {secret_word}.")
+        print(f"You lost! It was '{secret_word}'.")
     restart()
 
 def restart():
