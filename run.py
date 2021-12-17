@@ -157,11 +157,11 @@ def menu_difficulty():
         if difficulty == "1":
             choice = True
             number_attempts = 9
-            return attempts
+            return number_attempts
         elif difficulty == "2":
             choice = True
             number_attempts = 6
-            return attempts
+            return number_attempts
         elif difficulty == "3":
             choice = True
             number_attempts = 3
