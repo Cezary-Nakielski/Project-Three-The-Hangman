@@ -74,7 +74,7 @@ def game(secret_word, number_attempts):
     else:
         print(f"You lost! It was '{secret_word}'.")
         defeat()
-    restart (number_attempts)
+    restart(number_attempts)
 
 
 def restart(number_attempts):
