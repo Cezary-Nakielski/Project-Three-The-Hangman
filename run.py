@@ -35,7 +35,7 @@ def game(secret_word, number_attempts):
     print(word_display)
     print(f"attempts\n")
     while not game_score and attempts > 0:
-        guess = input("Guess the word or a letter contained in the word:\n").lower
+        guess = input("Guess the word or a letter inside in the word:\n").lower
         if len(guess) == 1 and guess.isalpha():
             if guess in attempt_letter:
                 print(f"You already tried {guess} before.")
@@ -76,6 +76,7 @@ def game(secret_word, number_attempts):
         defeat()
     restart (number_attempts)
 
+
 def restart(number_attempts):
     """
     Display options to restart the game and react to users input accordingly
@@ -104,6 +105,7 @@ def main():
 
     secret_word = secret_random_word()
     game(secret_word, number_attempts)
+
 
 def main_menu():
     """
@@ -134,11 +136,12 @@ def instructions():
     """
     print(
         """
-        Find the hidden word by either guessing a letter contained in the hidden word
-        or the whole word at once.
-        Each failed attempt will subtract one chance of guessing from the number of
-        chances given to you at the start of the game. If you run out of chances,
-        the game will be over and the hangman will hang you.
+        Find the hidden word by either guessing a letter contained in the
+        hidden word or the whole word at once.
+        Each failed attempt will subtract one chance of guessing from
+        the number of chances given to you at the start of the game.
+        If you run out of chances, the game will be over and
+        the hangman will hang you.
         """
     )
 
@@ -173,11 +176,11 @@ def menu_difficulty():
 def game_intro():
     print(
         """
-      _____  _           _  _                                      
-     |_   _|| |_   ___  | || | __ _  _ _   __ _  _ __   __ _  _ _  
-       | |  | ' \ / -_) | __ |/ _` || ' \ / _` || '  \ / _` || ' \ 
+      _____  _           _  _
+     |_   _|| |_   ___  | || | __ _  _ _   __ _  _ __   __ _  _ _
+       | |  | ' \ / -_) | __ |/ _` || ' \ / _` || '  \ / _` || ' \
        |_|  |_||_|\___| |_||_|\__,_||_||_|\__, ||_|_|_|\__,_||_||_|
-                                          |___/                    
+                                          |___/
         """
     )
 
@@ -185,19 +188,19 @@ def game_intro():
 def win():
     print(
         """
-     __      __ _       
-     \ \    / /(_) _ _  
-      \ \/\/ / | || ' \ 
+     __      __ _
+     \ \    / /(_) _ _
+      \ \/\/ / | || ' \
        \_/\_/  |_||_||_|
-        """         
+        """
     )
 
 
 def defeat():
     print(
         """
-      ___         __             _   
-     |   \  ___  / _| ___  __ _ | |_ 
+      ___         __             _
+     |   \  ___  / _| ___  __ _ | |_
      | |) |/ -_)|  _|/ -_)/ _` ||  _|
      |___/ \___||_|  \___|\__,_| \__|
         """
