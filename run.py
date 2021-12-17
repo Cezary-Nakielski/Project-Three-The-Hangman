@@ -111,9 +111,10 @@ def main_menu():
     """
     Main menu of the game
     """
-    print("1 to play")
-    print("2 for instructions")
-    print("3 to choose difficulty")
+    print("Press:\n")
+    print("1 - To play")
+    print("2 - For instructions")
+    print("3 - To choose difficulty")
     select = False
     while not select:
         option = input(" \n")
