@@ -128,7 +128,7 @@ def main_menu():
         elif option == "3":
             select = True
         else:
-            print("Choose between 1, 2 and 3 to select difficulty")
+            print("Incorrect input. Choose one of the above options.")
 
 
 def instructions():
@@ -173,7 +173,7 @@ def menu_difficulty():
             number_attempts = 3
             return number_attempts
         else:
-            print("Incorrect input. Choose one of the above options.")
+            print("Choose between 1, 2 and 3 to select difficulty.")
 
 
 def game_intro():
