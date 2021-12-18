@@ -81,7 +81,7 @@ def restart(number_attempts):
     """
     Display options to restart the game and react to users input accordingly
     """
-    option_restart = input("Do you want to restart the game? y/n")
+    option_restart = input("Do you want to restart the game? y/n\n")
     if option_restart == "y":
         secret_word = secret_random_word()
         game(secret_word, number_attempts)
