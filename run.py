@@ -35,7 +35,7 @@ def game(secret_word, number_attempts):
     print(word_display)
     print(f"attempts\n")
     while not game_score and attempts > 0:
-        guess = input("Guess the word or a letter inside in the word:\n").lower()
+        guess = input("Guess the word or a letter from the word:\n").lower()
         if len(guess) == 1 and guess.isalpha():
             if guess in attempt_letter:
                 print(f"You already tried {guess} before.")
@@ -137,10 +137,12 @@ def instructions():
     """
     print(
         """
-        Find the hidden word by either guessing a letter contained in the
-        hidden word or the whole word at once.
-        Each failed attempt will subtract one chance of guessing from
-        the number of chances given to you at the start of the game.
+        Find the hidden word by either
+        guessing a letter contained in the hidden word or
+        the whole word at once.
+        Each failed attempt will subtract one chance of guessing
+        from the number of chances
+        given to you at the start of the game.
         If you run out of chances, the game will be over and
         the hangman will hang you.
         """
