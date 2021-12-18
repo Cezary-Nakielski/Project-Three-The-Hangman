@@ -35,7 +35,7 @@ def game(secret_word, number_attempts):
     print(word_display)
     print(f"attempts\n")
     while not game_score and attempts > 0:
-        guess = input("Guess the word or a letter from the word:\n").lower()
+        guess = input("Guess the word or a letter inside in the word:\n").lower()
         if len(guess) == 1 and guess.isalpha():
             if guess in attempt_letter:
                 print(f"You already tried {guess} before.")
@@ -153,10 +153,10 @@ def menu_difficulty():
     """
     Display options to choose difficulty to the user and react to user's input
     """
-    print("Choose game difficulty:")
-    print("1 for Beginner")
-    print("2 for Player")
-    print("3 for Veteran")
+    print("Choose game difficulty:\n")
+    print("1 - For Beginner")
+    print("2 - For Player")
+    print("3 - For Veteran")
     choice = False
     while not choice:
         difficulty = input(" \n")
