@@ -31,18 +31,18 @@ def game(secret_word, number_attempts):
     attempt_letter = []
     word_display = len(secret_word) * "_"
     attempts = number_attempts
-    print("Game begins!")
-    print(word_display)
-    print(f"attempts\n")
+    print("Game begins!\n")
+    print(f"{word_display}\n")
+    print(f"Attempts: {attempts}\n")
     while not game_score and attempts > 0:
         guess = input("Guess the word or a letter inside in the word:\n").lower()
         if len(guess) == 1 and guess.isalpha():
             if guess in attempt_letter:
-                print(f"You already tried {guess} before.")
+                print(f"You already tried '{guess}' before.\n")
             elif guess not in secret_word:
                 attempt_letter.append(guess)
                 attempts -= 1
-                print(f"{guess} is not contained in the word.")
+                print(f"'{guess}' is not contained in the word.\n")
             else:
                 attempt_letter.append(guess)
                 word_display_list = list(word_display)
@@ -51,23 +51,23 @@ def game(secret_word, number_attempts):
                 for index in indices:
                     word_display_list[index] = guess
                 word_display = "".join(word_display_list)
-                print(f"{guess} is contained in the word.")
+                print(f"'{guess}' is contained in the word.\n")
                 if "_" not in word_display:
                     game_score = True
         elif len(secret_word) == len(guess) and guess.isalpha():
             if guess in attempt_word:
-                print(f"You already tried the word {guess} before.")
+                print(f"You already tried the word '{guess}' before.\n")
             elif guess != secret_word:
                 attempt_word.append(guess)
                 attempts -= 1
-                print(f"{guess} is not the word you're looking for.")
+                print(f"'{guess}' is not the word you're looking for.\n")
             else:
                 word_display = secret_word
                 game_score = True
         else:
-            print("It must be a letter or a whole word")
-        print(word_display)
-        print(f"attempts\n")
+            print("It must be a letter or the whole word.")
+        print(f"{word_display}\n")
+        print(f"Attempts: {attempts}\n")
     if game_score:
         print("You Won!")
         win()
