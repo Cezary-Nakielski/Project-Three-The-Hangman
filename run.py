@@ -35,7 +35,8 @@ def game(secret_word, number_attempts):
     print(f"{word_display}\n")
     print(f"Attempts: {attempts}\n")
     while not game_score and attempts > 0:
-        guess = input("Guess the word or a letter inside in the word:\n").lower()
+        guess = input("Guess the word or \
+a letter inside in the word: \n").lower()
         if len(guess) == 1 and guess.isalpha():
             if guess in attempt_letter:
                 print(f"You already tried '{guess}' before.\n")
@@ -208,4 +209,6 @@ def defeat():
      |___/ \___||_|  \___|\__,_| \__|
         """
     )
+
+
 main()
