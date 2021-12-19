@@ -32,7 +32,7 @@ def game(secret_word, number_attempts):
     word_display = len(secret_word) * "_"
     attempts = number_attempts
     print("Game begins!\n")
-    print(f"  " + " ".join(word_display) + "\n")
+    print("  " + " ".join(word_display) + "\n")
     print(f"Attempts: {attempts}\n")
     while not game_score and attempts > 0:
         guess = input("Guess the word or \
@@ -67,7 +67,7 @@ a letter inside in the word \n").lower()
                 game_score = True
         else:
             print("It must be a letter or the whole word.")
-        print(f"  " + " ".join(word_display) + "\n")
+        print("  " + " ".join(word_display) + "\n")
         print(f"Attempts: {attempts}\n")
     if game_score:
         print("You Won!")
