@@ -178,6 +178,9 @@ def menu_difficulty():
 
 
 def game_intro():
+    """
+    Display the game title in the main menu
+    """
     print(
         """
       _____  _           _  _
@@ -190,6 +193,9 @@ def game_intro():
 
 
 def win():
+    """
+    Display the 'Victory' graphic upon players win
+    """
     print(
         """
      __   __ _      _
@@ -202,6 +208,9 @@ def win():
 
 
 def defeat():
+    """
+    Display the 'Defeat' graphic upon players loss
+    """
     print(
         """
       ___         __             _
