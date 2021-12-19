@@ -1,3 +1,6 @@
+"""
+A list of words used in the game by the secret_random_word function
+"""
 random_list = [
     'scratch',
     'term',
