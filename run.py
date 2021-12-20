@@ -336,6 +336,18 @@ def progress(attempts):
 
 
          =============
+        """,
+        """
+
+
+
+
+
+
+
+
+
+         =======
         """
     ]
     return progress_count[attempts]
