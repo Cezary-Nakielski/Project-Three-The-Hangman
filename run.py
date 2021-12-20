@@ -142,7 +142,7 @@ def main_menu():
         elif option == "3":
             select = True
         else:
-            print(f"{Colours.RED}Incorrect input. Choose one of the above options.{Colours.RESET}\n")
+            print(f"{Colours.RED}Choose one of the above options.{Colours.RESET}\n")
 
 
 def instructions():
@@ -187,7 +187,7 @@ def menu_difficulty():
             number_attempts = 3
             return number_attempts
         else:
-            print(f"{Colours.MAGENTA}Choose between 1, 2 and 3 to select difficulty.{Colours.RESET}\n")
+            print(f"{Colours.CYAN}Choose between 1, 2 and 3 to select difficulty.{Colours.RESET}\n")
 
 
 def intro_title():
@@ -195,13 +195,13 @@ def intro_title():
     Display the game title above the main menu
     """
     print(
-        """
+        f"""{Colour.CYAN}
       _____  _           _  _
      |_   _|| |_   ___  | || | __ _  _ _   __ _  _ __   __ _  _ _
        | |  | ' \ / -_) | __ |/ _` || ' \ / _` || '  \ / _` || ' \\
        |_|  |_||_|\___| |_||_|\__,_||_||_|\__, ||_|_|_|\__,_||_||_|
                                           |___/
-        """
+        """{Colour.RESET}
     )
 
 
