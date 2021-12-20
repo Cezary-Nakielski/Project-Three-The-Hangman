@@ -50,11 +50,13 @@ def game(secret_word, number_attempts):
 a letter inside in the word \n").lower()
         if len(guess) == 1 and guess.isalpha():
             if guess in attempt_letter:
-                print(f"{Colours.RED}You already tried '{guess}' before.{Colours.RESET}\n")
+                print(f"{Colours.RED}You already
+                      tried '{guess}' before.{Colours.RESET}\n")
             elif guess not in secret_word:
                 attempt_letter.append(guess)
                 attempts -= 1
-                print(f"{Colours.RED}'{guess}' is not contained in the word.{Colours.RESET}\n")
+                print(f"{Colours.RED}'{guess}' is not contained
+                      in the word.{Colours.RESET}\n")
             else:
                 attempt_letter.append(guess)
                 word_display_list = list(word_display)
@@ -63,21 +65,25 @@ a letter inside in the word \n").lower()
                 for index in indices:
                     word_display_list[index] = guess
                 word_display = "".join(word_display_list)
-                print(f"{Colours.GREEN}'{guess}' is contained in the word.{Colours.RESET}\n")
+                print(f"{Colours.GREEN}'{guess}' is
+                      contained in the word.{Colours.RESET}\n")
                 if "_" not in word_display:
                     game_score = True
         elif len(secret_word) == len(guess) and guess.isalpha():
             if guess in attempt_word:
-                print(f"{Colours.RED}You already tried the word '{guess}' before{Colours.RESET}.\n")
+                print(f"{Colours.RED}You already tried
+                      the word '{guess}' before{Colours.RESET}.\n")
             elif guess != secret_word:
                 attempt_word.append(guess)
                 attempts -= 1
-                print(f"{Colours.RED}'{guess}' is not the word you're looking for.{Colours.RESET}\n")
+                print(f"{Colours.RED}'{guess}' is not the word
+                      you're looking for.{Colours.RESET}\n")
             else:
                 word_display = secret_word
                 game_score = True
         else:
-            print(f"{Colours.RED}It must be a letter or the whole word.{Colours.RESET}\n")
+            print(f"{Colours.RED}It must be a
+                  letter or the whole word.{Colours.RESET}\n")
         print("  " + " ".join(word_display) + "\n")
         print(f"Attempts: {attempts}\n")
         print(progress(attempts))
@@ -94,7 +100,8 @@ def restart(number_attempts):
     """
     Display options to restart the game and react to users input accordingly
     """
-    option_restart = input(f"{Colours.MAGENTA}Do you want to restart the game? y/n{Colours.RESET}\n")
+    option_restart = input(f"{Colours.MAGENTA}Do you want to
+                           restart the game? y/n{Colours.RESET}\n")
     if option_restart == "y":
         secret_word = secret_random_word()
         game(secret_word, number_attempts)
@@ -142,7 +149,8 @@ def main_menu():
         elif option == "3":
             select = True
         else:
-            print(f"{Colours.RED}Choose one of the above options.{Colours.RESET}\n")
+            print(f"{Colours.RED}Choose one of the above
+                  options.{Colours.RESET}\n")
 
 
 def instructions():
@@ -187,7 +195,8 @@ def menu_difficulty():
             number_attempts = 3
             return number_attempts
         else:
-            print(f"{Colours.CYAN}Choose between 1, 2 and 3 to select difficulty.{Colours.RESET}\n")
+            print(f"{Colours.CYAN}Choose between 1, 2 and 3 to
+                  select difficulty.{Colours.RESET}\n")
 
 
 def intro_title():
