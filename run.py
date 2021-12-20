@@ -14,7 +14,6 @@ class Colours:
     """
     Colours used for text and graphics which give feedback to the user
     """
-    MAGENTA = '\033[38;5;5m'
     GREEN = '\033[38;5;10m'
     RED = '\033[38;5;1m'
     CYAN = '\033[38;5;6m'
@@ -42,7 +41,7 @@ def game(secret_word, number_attempts):
     attempt_letter = []
     word_display = len(secret_word) * "_"
     attempts = number_attempts
-    print(f"{Colours.MAGENTA} The Game begins! {Colours.RESET}\n")
+    print(f"{Colours.CYAN} The Game begins! {Colours.RESET}\n")
     print("  " + " ".join(word_display) + "\n")
     print(f"Attempts: {attempts}\n")
     while not game_score and attempts > 0:
@@ -100,7 +99,7 @@ def restart(number_attempts):
     """
     Display options to restart the game and react to users input
     """
-    option_restart = input(f"{Colours.MAGENTA}Do you want to \
+    option_restart = input(f"{Colours.CYAN}Do you want to \
 restart the game? y/n{Colours.RESET}\n")
     if option_restart == "y":
         secret_word = secret_random_word()
