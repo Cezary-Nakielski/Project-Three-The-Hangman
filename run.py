@@ -71,7 +71,7 @@ a letter inside in the word \n").lower()
         print(f"Attempts: {attempts}\n")
     if game_score:
         print("You Won!")
-        win()
+        victory()
     else:
         print(f"You lost! It was '{secret_word}'.")
         defeat()
@@ -192,7 +192,7 @@ def game_intro():
     )
 
 
-def win():
+def victory():
     """
     Display the 'Victory' graphic upon players win
     """
