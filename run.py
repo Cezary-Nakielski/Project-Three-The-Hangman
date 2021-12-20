@@ -69,6 +69,7 @@ a letter inside in the word \n").lower()
             print("It must be a letter or the whole word.")
         print("  " + " ".join(word_display) + "\n")
         print(f"Attempts: {attempts}\n")
+        print(progress(attempts))
     if game_score:
         print("You Won!")
         victory()
@@ -222,7 +223,7 @@ def defeat():
     )
 
 
-def progress():
+def progress(attempts):
     """
     Display the graphic which represents the progress of game
     based on diminishing number of attempts left to the user
@@ -337,6 +338,7 @@ def progress():
          =============
         """
     ]
+    return progress_count[attempts]
 
 
 def intro_graphic():
