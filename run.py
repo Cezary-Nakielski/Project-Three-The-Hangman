@@ -98,7 +98,7 @@ def main():
     Initiate the game
     """
     intro_graphic()
-    game_intro()
+    intro_title()
     level = main_menu()
     if level == "level_chosen":
         number_attempts = 6
@@ -178,9 +178,9 @@ def menu_difficulty():
             print("Choose between 1, 2 and 3 to select difficulty.")
 
 
-def game_intro():
+def intro_title():
     """
-    Display the game title in the main menu
+    Display the game title above the main menu
     """
     print(
         """
